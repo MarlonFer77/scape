@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: purple;
+            text-align: center;
+
+        }
+
+        .painel {
+            padding-top: 20px;
+            margin: auto;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            border-radius: 20px;
+
+        }
+
+        h1 {
+            font-size: 500;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 120px;
+        }
+
+        #yes {
+
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: blue;
+            color: bisque;
+            font-size: 25px;
+            margin-left: -90px;
+
+
+        }
+
+        #yes:hover {
+            background-color: green;
+            transition: 0.5s;
+        }
+
+        #no {
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: red;
+            color: bisque;
+            font-size: 25px;
+            margin-left: 10px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="painel">
+        <h1>Pergunta séria LORILENA !!</h1>
+
+        <h2>Vai rolar o babão?</h2>
+
+
+        <a href="https://www.youtube.com/watch?v=-VEUWrmVsQ4"><button id="yes"> Sim! </button></a>
+        <button onmouseover="scape()" id="no"> Não! </button>
+
+    </div>
+
+    <script>
+        function scape() {
+            var buttonNo = document.getElementById("no")
+
+            var larguraJanela = window.innerWidth
+            var alturaJanela = window.innerHeight
+
+            var maxX = larguraJanela - buttonNo.offsetWidth
+            var maxY = alturaJanela - buttonNo.offsetHeight
+
+            var aleatorioX = Math.floor(Math.random() * maxX)
+            var aleatorioY = Math.floor(Math.random() * maxY)
+
+            buttonNo.style.left = aleatorioX + "px"
+            buttonNo.style.top = aleatorioY + "px"
+        }
+    </script>
+
+</body>
+
+</html>
